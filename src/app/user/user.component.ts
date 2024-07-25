@@ -9,8 +9,8 @@ import { User } from './user.model';
 })
 export class UserComponent {
   @Input({ required: true }) user!: User;
+  @Input({ required: true }) selected!: boolean;
   @Output() select = new EventEmitter();
-  // select = output<string>();
 
   get imagePath() {
     return `https://robohash.org/${this.user.avatar}`;
